@@ -1,0 +1,17 @@
+name: myfirsttest
+on:
+  push:
+     branches: [dev]
+     
+jobs:
+  GithubActions:   
+    runs-on: windows-latest
+    steps:
+      - name: Recruitment_Details
+        run: echo "A job description"
+        run: echo "HR receives applications"
+        run: echo "They identifies best candidates"
+        run: echo "Plan for interview"
+        run: echo "Conduct interview"
+        run: echo "Make and send job offer" 
+        run: echo "If accepted,start onboarding process"
