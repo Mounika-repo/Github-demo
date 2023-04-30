@@ -8,6 +8,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Bank Details
-        run: echo "I want new account in SBI"
-        run: echo "I have subbmitted necessary forms"
-        run: echo "And sucessfully opened my new account"
+        run: echo "sucessfully i have opened my new account"
