@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: Recruitment_Details
         run: echo "A job description"
-        run: echo "The listing is circulated"
         run: echo "HR  receives applications"
         run: echo "They identifies best candidates"
         run: echo "Plan for interview"
