@@ -6,6 +6,6 @@ on:
 jobs:
   Offer_letter:   
     runs-on: windows-latest
-    steps:
+    steps: 1
       - name: offer letter
         run: echo "I accepted offer letter,started onboarding process"
