@@ -6,6 +6,9 @@ on:
 jobs:
   Bank_details:   
     runs-on: windows-latest
-    steps:
+    steps: 1
       - name: Bank Details
         run: echo "sucessfully i have opened my new account"
+    steps: 2
+      - name: education details
+        run: echo "i have completed my enginneing"
