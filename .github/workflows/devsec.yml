@@ -2,13 +2,12 @@ name: devsec
 on:
   pull_request:
      branches: [dev]
-     
+
 jobs:
-  Bank_details:   
+  Bank-details:
     runs-on: windows-latest
-    steps: 1
-      - name: Bank Details
+    steps:
+      - name: bankdetails
         run: echo "sucessfully i have opened my new account"
-    steps: 2
       - name: education details
-        run: echo "i have completed my enginneing"
+        run: echo "I have completed my enginneing"
