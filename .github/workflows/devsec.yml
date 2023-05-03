@@ -4,7 +4,7 @@ on:
      branches: [dev]
 
 jobs:
-  Bank-details:
+  details:
     runs-on: windows-latest
     steps:
       - name: bankdetails
