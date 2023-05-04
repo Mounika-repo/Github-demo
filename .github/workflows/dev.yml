@@ -1,4 +1,4 @@
-name: myfirsttest
+name: dev
 on:
   push:
      branches: [dev]
@@ -6,6 +6,6 @@ on:
 jobs:
   Offer_letter:   
     runs-on: windows-latest
-    steps: 1
+    steps:
       - name: offer letter
         run: echo "I accepted offer letter,started onboarding process"
