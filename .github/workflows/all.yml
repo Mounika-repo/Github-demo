@@ -1,0 +1,26 @@
+name: all
+on:
+  push:
+     branches: [dev]
+  pull_request:
+     branches: [qc]
+     
+jobs:
+   details:
+     runs-on: windows-latest
+     steps: 
+       - name: bankdetails
+         run: echo "successfull opened my new acoount"
+         
+       - name: educationdetails
+         run: echo "i have completed my engineering"
+         
+       - name: offerletter
+         run: echo "i have got an offerletter" 
+   Employee:
+      runs-on: windows-latest
+      steps:
+        - name: employeedetails
+          run: echo "i have got job"
+          
+  
