@@ -1,4 +1,4 @@
-name: devsec
+name: qc
 on:
   pull_request:
      branches: [qc]

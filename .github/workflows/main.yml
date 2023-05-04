@@ -1,7 +1,7 @@
-name: 
+name: main
 on:
   pull_request:
-     branches: [dev]
+     branches: [main]
      
 jobs:
    details:
@@ -9,9 +9,16 @@ jobs:
      steps: 
        - name: bankdetails
          run: echo "successfull opened my new acoount"
-     steps:
+         
        - name: educationdetails
          run: echo "i have completed my engineering"
-     steps:
+         
        - name: offerletter
-         run: echo "i have got an offerletter"
+         run: echo "i have got an offerletter" 
+   Employee:
+      runs-on: windows-latest
+      steps:
+        - name: employeedetails
+          run: echo "i have got job"
+          
+  
