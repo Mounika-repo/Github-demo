@@ -1,0 +1,11 @@
+name: qc
+on:
+  pull_request:
+     branches: [qc]
+
+jobs:
+  details:
+    runs-on: windows-latest
+    steps:
+      - name: bankdetails
+        run: echo "sucessfully i have opened my new account"
