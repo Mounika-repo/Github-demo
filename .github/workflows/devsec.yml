@@ -9,5 +9,3 @@ jobs:
     steps:
       - name: bankdetails
         run: echo "sucessfully i have opened my new account"
-      - name: education details
-        run: echo "I have completed my enginneing"
