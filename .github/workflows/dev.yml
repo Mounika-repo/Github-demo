@@ -1,7 +1,7 @@
 name: dev
 on:
   push:
-     branches: [dev]
+     branches: none
      
 jobs:
   Offer_letter:   
