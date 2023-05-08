@@ -21,6 +21,7 @@ jobs:
       - name: offerletter
         run: echo "i have got an offerletter" 
   Employee:
+    if: ${{github.ref == 'refs/heads/main' && github.event_name == 'pull_request'}}
     runs-on: windows-latest
     steps:
       - name: employeedetails
