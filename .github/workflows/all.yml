@@ -6,13 +6,13 @@ on:
 jobs:
   Offer_letter:   
     name: Offer_letter job
-    if: $github.event.pull_request.base.ref == 'dev' && github.event_name == 'pull_request'
+    if: github.event.pull_request.base.ref == 'dev' && github.event_name == 'pull_request'
     runs-on: windows-latest
     steps:
       - name: offer letter
         run: echo "I accepted offer letter,started onboarding process"
   details:
-    if: $github.event.pull_request.base.ref == 'main' && github.event_name == 'pull_request'
+    if: github.event.pull_request.base.ref == 'main' && github.event_name == 'pull_request'
     runs-on: windows-latest
     steps:         
       - name: educationdetails
@@ -21,13 +21,13 @@ jobs:
       - name: offerletter
         run: echo "i have got an offerletter" 
   Employee:
-    if: $github.event.pull_request.base.ref == 'main' && github.event_name == 'pull_request'
+    if: github.event.pull_request.base.ref == 'main' && github.event_name == 'pull_request'
     runs-on: windows-latest
     steps:
       - name: employeedetails
         run: echo "i have got job"
   bankdetails:
-    if: $github.event.pull_request.base.ref == 'qc' && github.event_name == 'pull_request'
+    if: github.event.pull_request.base.ref == 'qc' && github.event_name == 'pull_request'
     runs-on: windows-latest
     steps:
       - name: bankdetails
