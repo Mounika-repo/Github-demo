@@ -2,12 +2,12 @@ name: workflow
 on: [push]
 
 jobs:
-  build:   
+  build:
     name: Hello world
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: run powershell script
-      shell: pwsh
-      run: |
-        .\build.ps1
+      - name: Check out repo        
+        uses: actions/checkout@v2
+      - run: |
+          ./build.ps1
+        shell: pwsh
