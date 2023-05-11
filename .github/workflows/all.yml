@@ -1,26 +1,34 @@
 name: all
 on:
-  push:
-     branches: [dev]
   pull_request:
-     branches: [qc, main]
+     branches: [dev, main, qc]
      
 jobs:
-   details:
-     runs-on: windows-latest
-     steps: 
-       - name: bankdetails
-         run: echo "successfull opened my new acoount"
-         
-       - name: educationdetails
-         run: echo "i have completed my engineering"
-         
-       - name: offerletter
-         run: echo "i have got an offerletter" 
-   Employee:
-      runs-on: windows-latest
-      steps:
-        - name: employeedetails
-          run: echo "i have got job"
-          
-  
+  Offer_letter:   
+    name: Offer_letter job
+    if: ${{ github.event.pull_request.base.ref == 'dev' && github.event_name == 'pull_request' }}
+    runs-on: windows-latest
+    steps:
+      - name: offer letter
+        run: echo "I accepted offer letter,started onboarding process"
+  details:
+    if: ${{ github.event.pull_request.base.ref == 'main' && github.event_name == 'pull_request' }}
+    runs-on: windows-latest
+    steps:         
+      - name: educationdetails
+        run: echo "i have completed my engineering"
+        
+      - name: offerletter
+        run: echo "i have got an offerletter" 
+  Employee:
+    if: ${{ github.event.pull_request.base.ref == 'main' && github.event_name == 'pull_request' }}
+    runs-on: windows-latest
+    steps:
+      - name: employeedetails
+        run: echo "i have got job"
+  bankdetails:
+    if: ${{ github.event.pull_request.base.ref == 'qc' && github.event_name == 'pull_request' }}
+    runs-on: windows-latest
+    steps:
+      - name: bankdetails
+        run: echo "sucessfully i have opened my new account"
