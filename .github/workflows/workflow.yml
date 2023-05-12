@@ -1,0 +1,28 @@
+name: workflow
+on:
+  push:
+     branches: [dev, qc]
+
+  workflow_dispatch:
+
+jobs:
+  build_dev:
+    name: Hello world1
+    runs-on: windows-latest
+    if: ${{ github.ref == 'refs/heads/dev' }}
+    steps:
+      - name: Check out repo        
+        uses: actions/checkout@v2
+      - run: |
+          ./build_dev.ps1
+        shell: pwsh
+  build_qa:
+    name: Hello world2
+    runs-on: windows-latest
+    if: ${{ github.ref == 'refs/heads/qc' }}
+    steps:
+      - name: Check out repo        
+        uses: actions/checkout@v2
+      - run: |
+          ./build_qc.ps1
+        shell: pwsh

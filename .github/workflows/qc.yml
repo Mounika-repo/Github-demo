@@ -1,7 +1,7 @@
 name: qc
 on:
   pull_request:
-     branches: [qc]
+     branches: none
 
 jobs:
   details:
