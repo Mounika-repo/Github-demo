@@ -1,16 +1,2 @@
-# Specify the path to the CSV file in the other repository
-$csvFilePath = "C:\Path\To\Another\Repo\file.csv"
 
 
-
-# Loop through each row in the CSV data
-foreach ($row in $csvData) {
-# Access the values of each column in the current row
-$Name = $row.Name
-$Age = $row.Age
-$Email = $row.Email
-
-# Perform your logic or actions using the column values
-# Example: Print the values of the columns
-Write-Host "Name: $Name, Age: $Age, Email: $Email"
-}
